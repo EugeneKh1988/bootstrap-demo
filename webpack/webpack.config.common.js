@@ -2,7 +2,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const StylelintPlugin = require('stylelint-webpack-plugin');
+//const StylelintPlugin = require('stylelint-webpack-plugin');
 
 // import and configure dotenv
 require('dotenv-defaults').config();
@@ -70,10 +70,10 @@ module.exports = {
       extensions: 'js',
       context: paths.src,
     }),
-    new StylelintPlugin({
+    /* new StylelintPlugin({
       extensions: ['css', 'scss'],
       context: paths.src,
-    }),
+    }), */
     new Dotenv(),
   ],
 };

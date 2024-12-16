@@ -4,20 +4,10 @@
     <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="index, follow" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#465e69" />
+
     <link rel="shortcut icon" href="favicon.ico" />
-    <meta name="apple-mobile-web-app-title" content="Webpack Bootstrap5 Starter" />
-    <meta name="application-name" content="Webpack Bootstrap5 Starter" />
-    <meta name="msapplication-TileColor" content="#e2e8f0" />
-    <meta name="msapplication-config" content="browserconfig.xml" />
-    <meta name="theme-color" content="#e2e8f0" />
 
     <!-- Title & description -->
     <title><%= htmlWebpackPlugin.options.title %></title>
@@ -28,16 +18,6 @@
       name="keywords"
       content="webpack, webpack5, bootstrap5, sass, postcss, babel, eslint, stylelint, prettier " />
 
-    <!-- Facebook Open-Graph Tags -->
-    <meta property="og:title" content="Webpack Bootstrap5 Starter" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Webpack Bootstrap5 Starter" />
-    <meta
-      property="og:description"
-      content="A starter frontend boilerplate using Webpack 5, Bootstrap 5, SASS, PostCSS, Babel, ESLint, Stylelint, Prettier and more." />
-    <meta property="og:url" content="<%= publicUrl %>/" />
-    <meta property="og:image" content="<%= publicUrl %>/fb_cover.jpg" />
-
     <script>
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
     </script>
@@ -47,43 +27,688 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <!-- Demo App -->
-    <div class="app">
-      <nav class="app__navbar navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <span class="navbar-brand"><%= htmlWebpackPlugin.options.title %></span>
-          <div class="ms-auto d-flex align-items-center">
-            <button type="button" class="btn app__bs-theme-toggle js-bs-theme-toggle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-sun-fill"
-                viewBox="0 0 16 16">
-                <path
-                  d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-moon-stars-fill"
-                viewBox="0 0 16 16">
-                <path
-                  d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
-                <path
-                  d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
-              </svg>
+    <nav class="navbar navbar-expand-lg navbar-text bg-nav">
+      <div class="container">
+        <div class="nav-item-left">
+          <img class="icon" src="<%= require('./images/position.svg') %>" />
+          <p class="city m-0">Киев</p>
+        </div>
+        <div class="right-menu">
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item right-menu-item">
+              <a class="nav-link active" href="#">Бренды</a>
+            </li>
+            <li class="list-group-item right-menu-item">
+              <a class="nav-link" href="#">Доставка</a>
+            </li>
+            <li class="list-group-item right-menu-item">
+              <a class="nav-link" href="#">Возврат</a>
+            </li>
+            <li class="list-group-item right-menu-item">
+              <a class="nav-link" href="#">Документация</a>
+            </li>
+            <li class="list-group-item right-menu-item">
+              <a class="nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown right-menu-drop">
+          <button
+            class="btn btn-secondary dropdown-toggle drop-btn"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img class="icon" src="<%= require('./images/dot_menu.svg') %>" />
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Бренды</a></li>
+            <li><a class="dropdown-item" href="#">Доставка</a></li>
+            <li><a class="dropdown-item" href="#">Возврат</a></li>
+            <li><a class="dropdown-item" href="#">Документация</a></li>
+            <li><a class="dropdown-item" href="#">Контакты</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Профиль</a></li>
+            <li><a class="dropdown-item" href="#">Заказы</a></li>
+            <li><a class="dropdown-item" href="#">Корзина</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="find-block">
+        <img class="logo d-none d-md-block" src="<%= require('./images/Logo.svg') %>" alt="Logo" />
+        <div class="d-flex justify-content-end flex-grow-1">
+          <button type="button" class="btn catalog-btn btn-primary">
+            <img class="icon" src="<%= require('./images/btn_cat.svg') %>" />
+            Каталог
+          </button>
+          <div class="find-input flex-grow-1">
+            <input class="form-control" type="text" placeholder="Поиск" />
+            <div class="find-icon-block">
+              <img class="icon" src="<%= require('./images/find.svg') %>" />
+            </div>
+          </div>
+        </div>
+        <div class="buttons right-menu">
+          <a class="buttons-item" href="#">
+            <img src="<%= require('./images/profile.svg') %>" alt="Профиль" />
+            <p>Профиль</p>
+          </a>
+          <a class="buttons-item" href="#">
+            <img src="<%= require('./images/order.svg') %>" alt="Заказы" />
+            <p>Заказы</p>
+          </a>
+          <a class="buttons-item" href="#">
+            <img src="<%= require('./images/cart.svg') %>" alt="Корзина" />
+            <p>Корзина</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <div class="container d-none d-lg-block">
+        <ul class="list-group list-group-horizontal actions-list">
+          <li class="list-group-item actions-item">
+            <a class="nav-link" href="#">Акции</a>
+          </li>
+          <li class="list-group-item actions-item">
+            <a class="nav-link" href="#">Строительные материалы</a>
+          </li>
+          <li class="list-group-item actions-item">
+            <a class="nav-link" href="#">Керамическая плитка</a>
+          </li>
+          <li class="list-group-item actions-item">
+            <a class="nav-link" href="#">Краски</a>
+          </li>
+          <li class="list-group-item actions-item">
+            <a class="nav-link" href="#">Сантехника</a>
+          </li>
+          <li class="list-group-item actions-item">
+            <a class="nav-link" href="#">Напольные покрытия</a>
+          </li>
+          <li class="list-group-item actions-item">
+            <a class="nav-link" href="#">Инструменты</a>
+          </li>
+          <li class="list-group-item actions-item">
+            <a class="nav-link" href="#">Обои</a>
+          </li>
+          <li class="list-group-item actions-item">
+            <a class="nav-link" href="#">Окна</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="menu-container d-flex d-lg-none">
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle drop-btn"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img class="icon" src="<%= require('./images/dot_menu.svg') %>" />
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Акции</a></li>
+              <li><a class="dropdown-item" href="#">Строительные материалы</a></li>
+              <li><a class="dropdown-item" href="#">Керамическая плитка</a></li>
+              <li><a class="dropdown-item" href="#">Краски</a></li>
+              <li><a class="dropdown-item" href="#">Сантехника</a></li>
+              <li><a class="dropdown-item" href="#">Напольные покрытия</a></li>
+              <li><a class="dropdown-item" href="#">Инструменты</a></li>
+              <li><a class="dropdown-item" href="#">Обои</a></li>
+              <li><a class="dropdown-item" href="#">Окна</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div id="carouselMain" class="carousel slide carousel-main">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="<%= require('./images/slide_1.png') %>"
+              class="d-block carousel-img"
+              alt="First slide" />
+            <div class="carousel-caption slide-caption">
+              <div class="d-none d-md-block">
+                <h5 class="header">Специальные предложения</h5>
+                <p class="subheader">на строительные материалы и товары для ремонта</p>
+              </div>
+              <button type="button" class="btn catalog-btn btn-primary">Подробнее</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="<%= require('./images/slide_2.png') %>" class="d-block" alt="Second slide" />
+            <div class="carousel-caption slide-caption">
+              <div class="d-none d-md-block">
+                <h5 class="header">Распродажа инструментов</h5>
+                <p class="subheader">
+                  «СтройкаСтор» стремится сделать условия покупки максимально выгодными для каждого
+                  покупателя, поэтому на сайте регулярно появляются товары со скидкой
+                </p>
+              </div>
+              <button type="button" class="btn catalog-btn btn-primary">Подробнее</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-btns">
+          <button class="carousel-btn" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
+            <img src="<%= require('./images/prev.svg') %>" alt="Prev" />
+          </button>
+          <button class="carousel-btn" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
+            <img src="<%= require('./images/next.svg') %>" alt="Next" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4 discounts">
+      <div class="header">
+        <h2 class="title">Акции</h2>
+        <div>
+          <button type="button" class="btn discounts-btn btn-outline-primary">
+            Все акции
+            <img class="icon" src="<%= require('./images/arrow_right.svg') %>" />
+          </button>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <div class="discount-item">
+            <div class="discount-image">
+              <img class="icon" src="<%= require('./images/ruberoid.png') %>" />
+              <div class="discount-value">-25%</div>
+            </div>
+            <div class="discount-description">
+              <h6 class="name">Рубероид РКП-350 ТУ, размер материала 1 х 10 м (10м2, 1 рулон)</h6>
+              <div class="price-block">
+                <p class="current-price">449 ₽</p>
+                <p class="old-price">499 ₽</p>
+              </div>
+              <button type="button" class="btn discount-btn btn-primary">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="discount-item">
+            <div class="discount-image">
+              <img class="icon" src="<%= require('./images/foam.png') %>" />
+              <div class="discount-value">-25%</div>
+            </div>
+            <div class="discount-description">
+              <h6 class="name">Пена монтажная ТЕХНОНИКОЛЬ MASTER 65 профессиональная всесезонная</h6>
+              <div class="price-block">
+                <p class="current-price">495 ₽</p>
+                <p class="old-price">660 ₽</p>
+              </div>
+              <button type="button" class="btn discount-btn btn-primary">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <div class="discount-item">
+            <div class="discount-image">
+              <img class="icon" src="<%= require('./images/net.png') %>" />
+              <div class="discount-value">-25%</div>
+            </div>
+            <div class="discount-description">
+              <h6 class="name">Сетка "Рабица" яч. 50х50/1,5х10 м-ОЦ</h6>
+              <div class="price-block">
+                <p class="current-price">1 499 ₽</p>
+                <p class="old-price">1 890 ₽</p>
+              </div>
+              <button type="button" class="btn discount-btn btn-primary">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="discount-item">
+            <div class="discount-image">
+              <img class="icon" src="<%= require('./images/tiles.png') %>" />
+              <div class="discount-value">-25%</div>
+            </div>
+            <div class="discount-description">
+              <h6 class="name">Металлочерепица, цвет коричневый, 1.18 х 1.15 м</h6>
+              <div class="price-block">
+                <p class="current-price">769 ₽</p>
+                <p class="old-price">999 ₽</p>
+              </div>
+              <button type="button" class="btn discount-btn btn-primary">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4 popular-cat">
+      <div class="header">
+        <h2 class="title">Популярные категории</h2>
+        <div>
+          <button type="button" class="btn discounts-btn btn-outline-primary">
+            Все категории
+            <img class="icon" src="<%= require('./images/arrow_right.svg') %>" />
+          </button>
+        </div>
+      </div>
+      <div class="categories">
+        <a class="category-item" href="#">
+          <p class="title">Душевые</p>
+          <img class="category-preview" src="<%= require('./images/shower.png') %>" alt="showers" />
+        </a>
+        <a class="category-item" href="#">
+          <p class="title">Пиломатериалы</p>
+          <img class="category-preview" src="<%= require('./images/lumber.png') %>" alt="Lumber" />
+        </a>
+        <a class="category-item" href="#">
+          <p class="title">Линолеум</p>
+          <img class="category-preview" src="<%= require('./images/linoleum.png') %>" alt="Lumber" />
+        </a>
+        <a class="category-item" href="#">
+          <p class="title">Обои</p>
+          <img class="category-preview" src="<%= require('./images/wallpaper.png') %>" alt="showers" />
+        </a>
+        <a class="category-item" href="#">
+          <p class="title">Инструменты</p>
+          <img class="category-preview" src="<%= require('./images/tools.png') %>" alt="Tools" />
+        </a>
+        <a class="category-item" href="#">
+          <p class="title">Товары для дачи</p>
+          <img
+            class="category-preview"
+            src="<%= require('./images/garden_goods.png') %>"
+            alt="Garden goods" />
+        </a>
+        <a class="category-item" href="#">
+          <p class="title">Окна</p>
+          <img class="category-preview" src="<%= require('./images/windows.png') %>" alt="Окна" />
+        </a>
+        <a class="category-item" href="#">
+          <p class="title">Двери</p>
+          <img class="category-preview" src="<%= require('./images/doors.png') %>" alt="Двери" />
+        </a>
+        <a class="category-item" href="#">
+          <p class="title">Сантехника</p>
+          <img class="category-preview" src="<%= require('./images/plumbing.png') %>" alt="Сантехника" />
+        </a>
+        <a class="category-item" href="#">
+          <p class="title">Краски</p>
+          <img class="category-preview" src="<%= require('./images/paints.png') %>" alt="Краски" />
+        </a>
+        <a class="category-item" href="#">
+          <p class="title">Электротовары</p>
+          <img
+            class="category-preview"
+            src="<%= require('./images/electrical_goods.png') %>"
+            alt="Электротовары" />
+        </a>
+        <a class="category-item" href="#">
+          <p class="title">Интерьер</p>
+          <img class="category-preview" src="<%= require('./images/interior.png') %>" alt="Интерьер" />
+        </a>
+      </div>
+    </div>
+
+    <div class="container popular-goods">
+      <div class="header">
+        <h2 class="title">Популярные товары</h2>
+      </div>
+      <div class="goods">
+        <div class="good-item">
+          <div class="good-image-container">
+            <img class="image" src="<%= require('./images/porcelain_stoneware.png') %>" />
+          </div>
+          <div class="good-description">
+            <a class="name" href="#">Керамогранит Yasmin 598х185 коричневый C-YA4M112D</a>
+            <p class="current-price">899 ₽</p>
+            <button type="button" class="btn good-btn btn-primary">В корзину</button>
+          </div>
+        </div>
+        <div class="good-item">
+          <div class="good-image-container">
+            <img class="image" src="<%= require('./images/ceresit.png') %>" />
+          </div>
+          <div class="good-description">
+            <a class="name" href="#">Затирка для узких швов Ceresit СЕ 33, цвет белый, 2 кг</a>
+            <p class="current-price">275 ₽</p>
+            <button type="button" class="btn good-btn btn-primary">В корзину</button>
+          </div>
+        </div>
+        <div class="good-item">
+          <div class="good-image-container">
+            <img class="image" src="<%= require('./images/primer.png') %>" />
+          </div>
+          <div class="good-description">
+            <a class="name" href="#">Грунтовка Старатели 10л глубокого проникновения</a>
+            <p class="current-price">839 ₽</p>
+            <button type="button" class="btn good-btn btn-primary">В корзину</button>
+          </div>
+        </div>
+        <div class="good-item">
+          <div class="good-image-container">
+            <img class="image" src="<%= require('./images/plasterboard.png') %>" />
+          </div>
+          <div class="good-description">
+            <a class="name" href="#">Гипсокартон Волма, 2500 х 1200 х 12,5 мм</a>
+            <p class="current-price">335 ₽</p>
+            <button type="button" class="btn good-btn btn-primary">В корзину</button>
+          </div>
+        </div>
+        <div class="good-item">
+          <div class="good-image-container">
+            <img class="image" src="<%= require('./images/profil.png') %>" />
+          </div>
+          <div class="good-description">
+            <a class="name" href="#">Профиль 0,55мм для гипсокартона</a>
+            <p class="current-price">195 ₽</p>
+            <button type="button" class="btn good-btn btn-primary">В корзину</button>
+          </div>
+        </div>
+        <div class="good-item">
+          <div class="good-image-container">
+            <img class="image" src="<%= require('./images/ruler.png') %>" />
+          </div>
+          <div class="good-description">
+            <a class="name" href="#">Рулетка 3м</a>
+            <p class="current-price">100 ₽</p>
+            <button type="button" class="btn good-btn btn-primary">В корзину</button>
+          </div>
+        </div>
+        <div class="good-item">
+          <div class="good-image-container">
+            <img class="image" src="<%= require('./images/knauf.png') %>" />
+          </div>
+          <div class="good-description">
+            <a class="name" href="#">Кнауф Мп 75 штукатурка гипсовая МН 30кг</a>
+            <p class="current-price">380 ₽</p>
+            <button type="button" class="btn good-btn btn-primary">В корзину</button>
+          </div>
+        </div>
+        <div class="good-item">
+          <div class="good-image-container">
+            <img class="image" src="<%= require('./images/angle.png') %>" />
+          </div>
+          <div class="good-description">
+            <a class="name" href="#">Уголок серый канализационный Д110 ГР90</a>
+            <p class="current-price">335 ₽</p>
+            <button type="button" class="btn good-btn btn-primary">В корзину</button>
+          </div>
+        </div>
+        <div class="good-item">
+          <div class="good-image-container">
+            <img class="image" src="<%= require('./images/rotband.png') %>" />
+          </div>
+          <div class="good-description">
+            <a class="name" href="#">Knauf Ротбанд, 30 кг</a>
+            <p class="current-price">508 ₽</p>
+            <button type="button" class="btn good-btn btn-primary">В корзину</button>
+          </div>
+        </div>
+        <div class="good-item">
+          <div class="good-image-container">
+            <img class="image" src="<%= require('./images/screw.png') %>" />
+          </div>
+          <div class="good-description">
+            <a class="name" href="#">Саморез по металлу 3,5х25 мм для гипсокартона</a>
+            <p class="current-price">340 ₽</p>
+            <button type="button" class="btn good-btn btn-primary">В корзину</button>
+          </div>
+        </div>
+        <div class="good-item">
+          <div class="good-image-container">
+            <img class="image" src="<%= require('./images/putty.png') %>" />
+          </div>
+          <div class="good-description">
+            <a class="name" href="#">Шпатлевка универсальная Danogips SuperFinish 17 л</a>
+            <p class="current-price">2 555 ₽</p>
+            <button type="button" class="btn good-btn btn-primary">В корзину</button>
+          </div>
+        </div>
+        <div class="good-item">
+          <div class="good-image-container">
+            <img class="image" src="<%= require('./images/tape.png') %>" />
+          </div>
+          <div class="good-description">
+            <a class="name" href="#">Клейкая лента металлизированная Изоспан FL 5х5000 см</a>
+            <p class="current-price">226 ₽</p>
+            <button type="button" class="btn good-btn btn-primary">В корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container brands">
+      <div class="header">
+        <h2 class="title">Популярные бренды</h2>
+        <div>
+          <button type="button" class="btn discounts-btn btn-outline-primary">
+            Все бренды
+            <img class="icon" src="<%= require('./images/arrow_right.svg') %>" />
+          </button>
+        </div>
+      </div>
+      <div class="brands-container">
+        <a href="#" class="brand-item">
+          <img class="image" src="<%= require('./images/bever.png') %>" />
+        </a>
+        <a href="#" class="brand-item">
+          <img class="image" src="<%= require('./images/braer.png') %>" />
+        </a>
+        <a href="#" class="brand-item">
+          <img class="image" src="<%= require('./images/stone.png') %>" />
+        </a>
+        <a href="#" class="brand-item">
+          <img class="image" src="<%= require('./images/euroblock.png') %>" />
+        </a>
+        <a href="#" class="brand-item">
+          <img class="image" src="<%= require('./images/perfecta.png') %>" />
+        </a>
+        <a href="#" class="brand-item">
+          <img class="image" src="<%= require('./images/mstera.png') %>" />
+        </a>
+        <a href="#" class="brand-item">
+          <img class="image" src="<%= require('./images/lsr.png') %>" />
+        </a>
+        <a href="#" class="brand-item">
+          <img class="image" src="<%= require('./images/galen.png') %>" />
+        </a>
+        <a href="#" class="brand-item">
+          <img class="image" src="<%= require('./images/recke.png') %>" />
+        </a>
+        <a href="#" class="brand-item">
+          <img class="image" src="<%= require('./images/modformat.png') %>" />
+        </a>
+        <a href="#" class="brand-item">
+          <img class="image" src="<%= require('./images/decra.png') %>" />
+        </a>
+        <a href="#" class="brand-item">
+          <img class="image" src="<%= require('./images/engels.png') %>" />
+        </a>
+      </div>
+    </div>
+
+    <div class="reviews">
+      <div class="container">
+        <div class="header pt-5">
+          <h2 class="title">Отзывы</h2>
+        </div>
+        <div id="carouselReview" class="carousel slide carousel-review">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="review-container">
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="left">
+                      <img class="avatar" src="<%= require('./images/avatar_Petr.png') %>" alt="Petr" />
+                      <p class="name">Пётр</p>
+                    </div>
+                    <img class="apostrofe" src="<%= require('./images/apostrofe.png') %>" alt="Apostrofe" />
+                  </div>
+                  <p class="review-text">
+                    Сегодня 10.03.2022 года, брал перфоратор в аренду в магазине по улице Дорожная. Продавец
+                    всё хорошо объяснил, показал и плюс остался бонус в ящике перфоратора это бур нужного мне
+                    диаметра, оставленным прежним арендатором. В общем повесил телевизор, где надо было
+                    просверлить 4 отверстия, всего за 100 ₽
+                  </p>
+                  <p class="review-date">21 марта 2022 г.</p>
+                </div>
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="left">
+                      <img class="avatar" src="<%= require('./images/avatar_Anna.png') %>" alt="Petr" />
+                      <p class="name">Анна</p>
+                    </div>
+                    <img class="apostrofe" src="<%= require('./images/apostrofe.png') %>" alt="Apostrofe" />
+                  </div>
+                  <p class="review-text">
+                    Живу в п.Володарский МО, очень были рады открытию магазина СтройкаСтор. Хорошие
+                    сотрудники, но особенно хочется отметить работу Алексея за его помощь в решении проблем,
+                    очень квалифицированные рекомендации по подбору строительных материалов для ремонта.
+                    Хороший ассортимент
+                  </p>
+                  <p class="review-date">18 марта 2022 г.</p>
+                </div>
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="left">
+                      <img class="avatar" src="<%= require('./images/avatar_Viktor.png') %>" alt="Petr" />
+                      <p class="name">Виктор</p>
+                    </div>
+                    <img class="apostrofe" src="<%= require('./images/apostrofe.png') %>" alt="Apostrofe" />
+                  </div>
+                  <p class="review-text">
+                    Заказывал в данном магазине строй материалы. Привезли их вовремя и в прекрасном состоянии,
+                    претензий к доставке, персоналу и прочему меня нет. Строй материалы мне понравились,
+                    ремонт с ними я сделал отличный. Магазин мне безумно понравился, обязательно обращусь сюда
+                    снова, большое спасибо
+                  </p>
+                  <p class="review-date">6 ноября 2021 г.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="review-container">
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="left">
+                      <img class="avatar" src="<%= require('./images/avatar_Petr.png') %>" alt="Petr" />
+                      <p class="name">Пётр</p>
+                    </div>
+                    <img class="apostrofe" src="<%= require('./images/apostrofe.png') %>" alt="Apostrofe" />
+                  </div>
+                  <p class="review-text">
+                    Сегодня 10.03.2022 года, брал перфоратор в аренду в магазине по улице Дорожная. Продавец
+                    всё хорошо объяснил, показал и плюс остался бонус в ящике перфоратора это бур нужного мне
+                    диаметра, оставленным прежним арендатором. В общем повесил телевизор, где надо было
+                    просверлить 4 отверстия, всего за 100 ₽
+                  </p>
+                  <p class="review-date">21 марта 2022 г.</p>
+                </div>
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="left">
+                      <img class="avatar" src="<%= require('./images/avatar_Anna.png') %>" alt="Petr" />
+                      <p class="name">Анна</p>
+                    </div>
+                    <img class="apostrofe" src="<%= require('./images/apostrofe.png') %>" alt="Apostrofe" />
+                  </div>
+                  <p class="review-text">
+                    Живу в п.Володарский МО, очень были рады открытию магазина СтройкаСтор. Хорошие
+                    сотрудники, но особенно хочется отметить работу Алексея за его помощь в решении проблем,
+                    очень квалифицированные рекомендации по подбору строительных материалов для ремонта.
+                    Хороший ассортимент
+                  </p>
+                  <p class="review-date">18 марта 2022 г.</p>
+                </div>
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="left">
+                      <img class="avatar" src="<%= require('./images/avatar_Viktor.png') %>" alt="Petr" />
+                      <p class="name">Виктор</p>
+                    </div>
+                    <img class="apostrofe" src="<%= require('./images/apostrofe.png') %>" alt="Apostrofe" />
+                  </div>
+                  <p class="review-text">
+                    Заказывал в данном магазине строй материалы. Привезли их вовремя и в прекрасном состоянии,
+                    претензий к доставке, персоналу и прочему меня нет. Строй материалы мне понравились,
+                    ремонт с ними я сделал отличный. Магазин мне безумно понравился, обязательно обращусь сюда
+                    снова, большое спасибо
+                  </p>
+                  <p class="review-date">6 ноября 2021 г.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-review-btns">
+            <button
+              class="carousel-review-btn"
+              type="button"
+              data-bs-target="#carouselReview"
+              data-bs-slide="prev">
+              <img src="<%= require('./images/prev.svg') %>" alt="Prev" />
+            </button>
+            <button
+              class="carousel-review-btn"
+              type="button"
+              data-bs-target="#carouselReview"
+              data-bs-slide="next">
+              <img src="<%= require('./images/next.svg') %>" alt="Next" />
             </button>
           </div>
         </div>
-      </nav>
-      <div class="app__main d-flex align-items-center justify-content-center">
-        <div class="container">
-          <div class="p-5 text-center">
-            <img class="app__logo mt-4 mb-3" src="<%= require('./images/webpack-icon.svg') %>" />
-            <p class="col-lg-8 mx-auto">Edit <code>src/index.js</code> and save to reload.</p>
+      </div>
+    </div>
+
+    <div class="container about mt-5">
+      <div class="about-block">
+        <h2 class="title">О компании</h2>
+        <p class="about-text">
+          В СтройкаСтор вы всегда можете купить все необходимые товары для ремонта домаи дачи. Хотите сделать
+          ремонт в квартире? Строите загородный дом? Используйте строительные и отделочные материалы из нашего
+          каталога. Быстрая доставка строительных товаров по низким ценам сделает ваши покупки более
+          приятными. Ремонт может стоить дешево, если делать его с нами. Для вас всегда в наличии более 30 000
+          товаров для строительства по низким ценам каждый день. СтройкаСтор — это широкий ассортимент товаров
+          для дома и ремонта недорого; Возможность заказать строительные и отделочные материалы для дома и
+          дачи.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3">
+            <div class="logo-block">
+              <img src="<%= require('./images/Logo.png') %>" alt="Logo" />
+              <p class="company-name">StroykaStore</p>
+            </div>
+            <div class="footer-item">info@stroykastore.com</div>
+            <div class="footer-item">Киев</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <a class="footer-link footer-item" href="#"> Личный кабинет </a>
+            <a class="footer-link footer-item" href="#"> Заказы </a>
+            <a class="footer-link footer-item" href="#"> Избранное </a>
+            <a class="footer-link footer-item" href="#"> Корзина </a>
+          </div>
+          <div class="col-6 col-md-3">
+            <a class="footer-link footer-item" href="#"> Каталог </a>
+            <a class="footer-link footer-item" href="#"> Акции </a>
+            <a class="footer-link footer-item" href="#"> Бренды </a>
+            <a class="footer-link footer-item" href="#"> Контакты </a>
+          </div>
+          <div class="col-6 col-md-3">
+            <a class="footer-link footer-item" href="#"> Стать продавцом </a>
+            <a class="footer-link footer-item" href="#"> Доставка </a>
+            <a class="footer-link footer-item" href="#"> Возврат </a>
+            <a class="footer-link footer-item" href="#"> Документация </a>
           </div>
         </div>
       </div>
